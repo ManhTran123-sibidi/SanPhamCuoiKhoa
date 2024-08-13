@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #87CEEB;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .checkout-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .checkout-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .checkout-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .checkout-summary h4 {
+            font-size: 20px;
+        }
+
+        .checkout-summary p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .checkout-total {
+            text-align: right;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-complete-order {
+            display: block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-complete-order:hover {
+            background-color: #555;
+            
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #87CEEB;
+            color: white;
+            margin-top: 50px;
+            color: #87CEEB;
+        }
+ 
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Tên Shop</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index1.html">Trang Chủ</a></li>
+                    <li><a href="sanpham.html">Sản Phẩm</a></li>
+                    <li><a href="login.html">Đăng Nhập</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="Thanhtoan.html">Thanh Toán</a></li>
+                    <li><a href="signup.html">Đăng Kí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="checkout-container"id="checkout-container">
+        <h2 class="checkout-title" >Xác Nhận Thanh Toán</h2>
+
+        <a href="#" class="btn-complete-order">Hoàn Tất Đơn Hàng</a>
+    </div>
+    <div id="checkout-container"></div>
+   <p id="total-price" class="total-price"></p>
+    
+   
+    <footer class="footer">
+        <p>&copy; 2024 Tên Shop. All rights reserved.</p>
+    </footer>
+    <script src="thanhtoan.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #87CEEB;
+    color: white;
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ffcc00;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.products h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.product-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: calc(33.333% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.btn-add-cart {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-add-cart:hover {
+    background-color: #555;
+}
+
+.btn-see-product {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.modal {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #87CEEB;
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Tên Shop</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index1.html">Trang Chủ</a></li>
+                    <li><a href="sanpham.html">Sản Phẩm</a></li>
+                    <li><a href="login.html">Đăng Nhập</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="Thanhtoan.html">Thanh Toán</a></li>
+                    <li><a href="signup.html">Đăng Kí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h2>Chào mừng đến với cửa hàng của chúng tôi!</h2>
+            <p>Khám phá những sản phẩm tuyệt vời nhất của chúng tôi ngay hôm nay.</p>
+            <a href="#" class="btn">Xem Sản Phẩm</a>
+        </section>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="nomsua.png" alt="Sản phẩm 1">
+                <h4>Nộm Sứa</h4>
+                <p>100.000 VNĐ</p>
+              <button class="btn-add-cart" onclick="addToCart('Sản phẩm 1', 10)">Thêm vào Giỏ</button>
+              <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="cha-ca.png" alt="Sản phẩm 2">
+                <h4>Chả Cá</h4>
+                <p>120.000 VNĐ</p>
+                <button class="btn-add-cart" onclick="addToCart('Sản phẩm 2', 15)" id="onclick">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 2', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="comrang.png" alt="Sản phẩm 3">
+                <h4>Cơm Rang Thập Cẩm</h4>
+                <p>150.000 VNĐ</p>
+                <button class="btn-add-cart" onclick="addToCart('Sản Ph')">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="vitquay.png" alt="Sản phẩm 1">
+                <h4>Vịt Quay</h4>
+                <p>300.000 VNĐ</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="boluclac.png" alt="Sản phẩm 2">
+                <h4>Bò Lúc Lắc</h4>
+                <p>$15.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="garangmuoi.png" alt="Sản phẩm 3">
+                <h4>Sản phẩm 3</h4>
+                <p>$20.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 1">
+                <h4>Sản phẩm 1</h4>
+                <p>$10.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 2">
+                <h4>Sản phẩm 2</h4>
+                <p>$15.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 3">
+                <h4>Sản phẩm 3</h4>
+                <p>$20.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 1">
+                <h4>Sản phẩm 1</h4>
+                <p>$10.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 2">
+                <h4>Sản phẩm 2</h4>
+                <p>$15.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+            <div class="product-item">
+                <img src="" alt="Sản phẩm 3">
+                <h4>Sản phẩm 3</h4>
+                <p>$20.00</p>
+                <button class="btn-add-cart" onclick="addToCart()">Thêm vào Giỏ</button>
+                <button class="btn-see-product" onclick="seeProduct('Sản phẩm 1', 10)">Mô Tả Ngắn về Sản Phẩm</button>
+            </div>
+        </div>
+<div id="description-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeViewProduct()">&times;</span>
+        <h2 id="modal-title">Mô tả Sản phẩm</h2>
+        <p id="modal-description">Mô tả chi tiết sản phẩm sẽ được hiển thị ở đây.</p>
+    </div>
+</div>
+
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Tên Shop. All rights reserved.</p>
+    </footer>
+    <script src="sanpham.js"></script>
+    
+</body>
+</html>

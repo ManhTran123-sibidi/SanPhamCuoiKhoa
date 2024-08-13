@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    .header {
+        background-color: #87CEE3;
+        color: white;
+        padding: 10px 0;
+    }
+    
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+    
+    .cart {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cart h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .cart-items {
+        margin-bottom: 30px;
+    }
+    
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
+    
+    .cart-item-details {
+        flex: 1;
+        margin-right: 15px;
+    }
+    
+    .cart-item-details h4 {
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    .cart-item-details p {
+        font-size: 16px;
+        color: #666;
+        margin: 5px 0;
+    }
+    
+    .cart-item-quantity,
+    .cart-item-price {
+        font-size: 18px;
+        color: #333;
+    }
+    
+    .cart-item-remove {
+        color: red;
+        cursor: pointer;
+    }
+    
+    .cart-total {
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    
+    .cart-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    
+    .cart-buttons .btn {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .cart-buttons .btn:hover {
+        background-color: #555;
+    }
+    
+    .content {
+    padding-bottom: 50px; /* Hoặc margin-bottom */
+}
+
+footer {
+    background-color: 87CEE3;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Tên Shop</h1>
+            <ul class="nav-links">
+                <li><a href="index1.html">Trang Chủ</a></li>
+                <li><a href="sanpham.html">Sản Phẩm</a></li>
+                <li><a href="login.html">Đăng Nhập</a></li>
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="Thanhtoan.html">Thanh Toán</a></li>
+                <li><a href="signup.html">Đăng Kí</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Giỏ Hàng Của Bạn</h2>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-total" id="cart-total"></div>
+            <div class="cart-buttons">
+                <a href="sanpham.html" class="btn">Tiếp Tục Mua Sắm</a>
+                <a href="Thanhtoan.html" class="btn">Thanh Toán</a>
+            </div>
+            <div id="cart-container"></div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tên Shop. All rights reserved.</p>
+    </footer>
+   <script src="cart.js"> 
+    
+   </script>
+        
+    </body>
+</html>
